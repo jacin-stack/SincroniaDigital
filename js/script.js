@@ -81,15 +81,10 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// Validación de formularios
+// Validación de formularios (solo cliente, para StaticForms)
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-}
-
-function validatePhone(phone) {
-    const phoneRegex = /^[\+]?[0-9\s\-\(\)]{9,}$/;
-    return phoneRegex.test(phone);
 }
 
 function showMessage(form, message, isSuccess = false) {
@@ -107,151 +102,79 @@ function showMessage(form, message, isSuccess = false) {
     }
 }
 
-// Función para enviar email usando Spring Boot backend
-async function sendEmail(formData) {
-    try {
-        const response = await fetch('http://localhost:8081/api/contact/send', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                nombre: formData.get('nombre') || formData.get('modal-nombre'),
-                email: formData.get('email') || formData.get('modal-email'),
-                telefono: formData.get('telefono') || null,
-                servicio: formData.get('servicio') || null,
-                mensaje: formData.get('mensaje') || formData.get('modal-mensaje')
-            })
-        });
-
-        const result = await response.json();
-        return result;
-    } catch (error) {
-        console.error('Error enviando email:', error);
-        return { success: false, message: 'Error de conexión con el servidor' };
-    }
-}
-
-// Formulario principal de contacto
+// Formulario principal de contacto (usa StaticForms)
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
+    contactForm.addEventListener('submit', function (e) {
         const formData = new FormData(this);
-        const nombre = formData.get('nombre').trim();
-        const email = formData.get('email').trim();
-        const telefono = formData.get('telefono').trim();
+        const nombre = (formData.get('nombre') || '').trim();
+        const email = (formData.get('email') || '').trim();
+        const telefono = (formData.get('telefono') || '').trim();
         const servicio = formData.get('servicio');
-        const mensaje = formData.get('mensaje').trim();
+        const mensaje = (formData.get('mensaje') || '').trim();
 
-        // Validaciones
+        let hasError = false;
+
         if (!nombre || !email || !mensaje) {
             showMessage(this, 'Por favor, rellena todos los campos obligatorios.');
-            return;
-        }
-
-        if (nombre.length < 2) {
+            hasError = true;
+        } else if (nombre.length < 2) {
             showMessage(this, 'El nombre debe tener al menos 2 caracteres.');
-            return;
-        }
-
-        if (!validateEmail(email)) {
+            hasError = true;
+        } else if (!validateEmail(email)) {
             showMessage(this, 'Por favor, introduce un correo electrónico válido.');
-            return;
-        }
-
-        if (telefono && !validatePhone(telefono)) {
+            hasError = true;
+        } else if (telefono && telefono.length < 6) {
             showMessage(this, 'Por favor, introduce un número de teléfono válido.');
-            return;
-        }
-
-        if (!servicio) {
+            hasError = true;
+        } else if (!servicio) {
             showMessage(this, 'Por favor, selecciona un servicio.');
-            return;
-        }
-
-        if (mensaje.length < 10) {
+            hasError = true;
+        } else if (mensaje.length < 10) {
             showMessage(this, 'El mensaje debe tener al menos 10 caracteres.');
+            hasError = true;
+        }
+
+        if (hasError) {
+            e.preventDefault();
             return;
         }
 
-        // Mostrar indicador de carga
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        submitBtn.disabled = true;
-
-        // Enviar email
-        const result = await sendEmail(formData);
-
-        if (result.success) {
-            showMessage(this, '¡Mensaje enviado correctamente! Nos pondremos en contacto contigo en menos de 24 horas.', true);
-            this.reset();
-        } else {
-            showMessage(this, result.message || 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
-        }
-
-        // Restaurar botón
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
+        // Si todo es correcto, dejamos que el formulario se envíe a StaticForms
     });
 }
 
-// Formulario modal
+// Formulario modal (también StaticForms)
 const modalContactForm = document.getElementById('modal-contact-form');
 if (modalContactForm) {
-    modalContactForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
+    modalContactForm.addEventListener('submit', function (e) {
         const formData = new FormData(this);
-        const nombre = formData.get('modal-nombre').trim();
-        const email = formData.get('modal-email').trim();
-        const mensaje = formData.get('modal-mensaje').trim();
+        const nombre = (formData.get('nombre') || '').trim();
+        const email = (formData.get('email') || '').trim();
+        const mensaje = (formData.get('mensaje') || '').trim();
 
-        // Validaciones
+        let hasError = false;
+
         if (!nombre || !email || !mensaje) {
             showMessage(this, 'Por favor, rellena todos los campos obligatorios.');
-            return;
-        }
-
-        if (nombre.length < 2) {
+            hasError = true;
+        } else if (nombre.length < 2) {
             showMessage(this, 'El nombre debe tener al menos 2 caracteres.');
-            return;
-        }
-
-        if (!validateEmail(email)) {
+            hasError = true;
+        } else if (!validateEmail(email)) {
             showMessage(this, 'Por favor, introduce un correo electrónico válido.');
-            return;
-        }
-
-        if (mensaje.length < 10) {
+            hasError = true;
+        } else if (mensaje.length < 10) {
             showMessage(this, 'El mensaje debe tener al menos 10 caracteres.');
+            hasError = true;
+        }
+
+        if (hasError) {
+            e.preventDefault();
             return;
         }
 
-        // Mostrar indicador de carga
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        submitBtn.disabled = true;
-
-        // Enviar email
-        const result = await sendEmail(formData);
-
-        if (result.success) {
-            showMessage(this, '¡Consulta enviada! Te contactaremos en menos de 24 horas.', true);
-            this.reset();
-            setTimeout(() => {
-                closeModal('contact-modal');
-            }, 2000);
-        } else {
-            showMessage(this, result.message || 'Error al enviar la consulta. Por favor, inténtalo de nuevo.');
-        }
-
-        // Restaurar botón
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
+        // Si todo es correcto, dejamos que el formulario modal se envíe a StaticForms
     });
 }
 

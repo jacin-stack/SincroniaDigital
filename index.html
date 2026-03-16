@@ -344,7 +344,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form" action="https://api.staticforms.xyz/submit" method="POST">
+                <form id="contact-form" class="contact-form" action="https://api.staticforms.xyz/submit" method="POST">
                     <!-- Clave de StaticForms -->
                     <input type="hidden" name="accessKey" value="sf_42blnkn3chb88ca6i3kb2ib5">
 
@@ -356,7 +356,7 @@
 
                     <!-- Campos obligatorios -->
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Nombre completo" required>
+                        <input type="text" name="nombre" placeholder="Nombre completo" required>
                     </div>
                     <div class="form-group">
                         <input type="email" name="email" placeholder="Correo electrónico" required>
@@ -375,12 +375,13 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                        <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
                     </div>
                     <button type="submit" class="btn-primary">
                         <i class="fas fa-paper-plane"></i>
                         Enviar mensaje
                     </button>
+                    <div class="form-message"></div>
                 </form>
             </div>
         </div>
@@ -441,10 +442,18 @@
             <span class="close" onclick="closeModal('contact-modal')">&times;</span>
             <h2>Consulta Gratuita</h2>
             <p>Déjanos tus datos y te contactamos en menos de 24h.</p>
-            <form class="modal-form" id="modal-contact-form">
-                <input type="text" name="modal-nombre" placeholder="Nombre" required>
-                <input type="email" name="modal-email" placeholder="Correo electrónico" required>
-                <textarea name="modal-mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
+            <form class="modal-form" id="modal-contact-form" action="https://api.staticforms.xyz/submit" method="POST">
+                <!-- Clave de StaticForms -->
+                <input type="hidden" name="accessKey" value="sf_42blnkn3chb88ca6i3kb2ib5">
+
+                <!-- Opcional: mensaje personalizado / redirección -->
+                <input type="hidden" name="subject" value="Nuevo mensaje desde la web">
+                <input type="text" name="honeypot" style="display:none">
+                <input type="hidden" name="redirectTo" value="https://sincroniadigital.es/">
+
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
                 <button type="submit" class="btn-primary">Enviar</button>
                 <div class="form-message" id="modal-form-message"></div>
             </form>
