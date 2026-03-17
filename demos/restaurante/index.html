@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#12110f" />
+
+  <title>El Buen Sabor | Restaurante</title>
+  <meta name="description"
+    content="El Buen Sabor: cocina de autor con alma tradicional. Reserva tu mesa y descubre una experiencia elegante, cálida y deliciosa." />
+
+  <meta property="og:title" content="El Buen Sabor | Restaurante" />
+  <meta property="og:description"
+    content="Cocina de autor con alma tradicional. Reserva tu mesa y descubre una experiencia elegante, cálida y deliciosa." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-elevate-on-scroll>
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="El Buen Sabor, ir al inicio">
+        <span class="brand-mark" aria-hidden="true">EBS</span>
+        <span class="brand-name">El Buen Sabor</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Abrir menú</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+        <a class="nav-link" href="#carta">Carta</a>
+        <a class="nav-link" href="#experiencia">Experiencia</a>
+        <a class="nav-link" href="#galeria">Galería</a>
+        <a class="nav-link" href="#reservas">Reservas</a>
+        <a class="nav-link" href="#contacto">Contacto</a>
+        <a class="btn btn-primary btn-small" href="#reservas">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Restaurante · Cocina de autor</p>
+          <h1 class="hero-title">
+            Elegancia, tradición y sabor
+            <span class="hero-accent">en cada plato</span>.
+          </h1>
+          <p class="hero-subtitle">
+            En <strong>El Buen Sabor</strong> cuidamos cada detalle: ingredientes frescos,
+            técnicas precisas y un ambiente cálido para que tu visita sea memorable.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#reservas">Reservar mesa</a>
+            <a class="btn btn-ghost" href="#carta">Ver la carta</a>
+          </div>
+
+          <dl class="hero-highlights">
+            <div class="hl">
+              <dt>Cocina</dt>
+              <dd>De temporada</dd>
+            </div>
+            <div class="hl">
+              <dt>Ambiente</dt>
+              <dd>Elegante &amp; acogedor</dd>
+            </div>
+            <div class="hl">
+              <dt>Horario</dt>
+              <dd>Mar–Dom</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <div class="hero-card hero-card-top">
+            <p class="hero-card-kicker">Sugerencia del chef</p>
+            <p class="hero-card-title">Arroz meloso de mar</p>
+            <p class="hero-card-meta">Marisco · Fondo casero · Toque cítrico</p>
+          </div>
+          <div class="hero-image">
+            <div class="hero-image-overlay"></div>
+          </div>
+          <div class="hero-card hero-card-bottom">
+            <p class="hero-card-kicker">Maridaje</p>
+            <p class="hero-card-title">Blanco joven</p>
+            <p class="hero-card-meta">Fresco · Aromático · Equilibrado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="carta" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Carta</h2>
+          <p class="section-subtitle">
+            Una selección breve y cuidada. Cambiamos platos según mercado y temporada.
+          </p>
+        </div>
+
+        <div class="menu-toolbar" role="tablist" aria-label="Categorías de carta">
+          <button class="chip is-active" type="button" data-filter="todo" role="tab" aria-selected="true">
+            Todo
+          </button>
+          <button class="chip" type="button" data-filter="entrantes" role="tab" aria-selected="false">
+            Entrantes
+          </button>
+          <button class="chip" type="button" data-filter="principales" role="tab" aria-selected="false">
+            Principales
+          </button>
+          <button class="chip" type="button" data-filter="postres" role="tab" aria-selected="false">
+            Postres
+          </button>
+          <button class="chip" type="button" data-filter="bebidas" role="tab" aria-selected="false">
+            Bebidas
+          </button>
+        </div>
+
+        <div class="menu-grid" data-menu>
+          <article class="menu-item" data-category="entrantes">
+            <div class="menu-item-top">
+              <h3 class="menu-item-title">Croquetas cremosas</h3>
+              <p class="menu-item-price">6,90 €</p>
+            </div>
+            <p class="menu-item-desc">Jamón ibérico, bechamel ligera y crujiente perfecto.</p>
+            <p class="menu-item-tags">Iberico · Casero</p>
+          </article>
+
+          <article class="menu-item" data-category="entrantes">
+            <div class="menu-item-top">
+              <h3 class="menu-item-title">Ensalada templada</h3>
+              <p class="menu-item-price">8,50 €</p>
+            </div>
+            <p class="menu-item-desc">Verduras de temporada, queso suave y vinagreta de miel.</p>
+            <p class="menu-item-tags">Temporada · Ligero</p>
+          </article>
+
+          <article class="menu-item" data-category="principales">
+            <div class="menu-item-top">
+              <h3 class="menu-item-title">Solomillo a la brasa</h3>
+              <p class="menu-item-price">18,90 €</p>
+            </div>
+            <p class="menu-item-desc">Punto perfecto, reducción de vino tinto y patata cremosa.</p>
+            <p class="menu-item-tags">Brasa · Clásico</p>
+          </article>
+
+          <article class="menu-item" data-category="principales">
+            <div class="menu-item-top">
+              <h3 class="menu-item-title">Arroz meloso de mar</h3>
+              <p class="menu-item-price">16,90 €</p>
+            </div>
+            <p class="menu-item-desc">Fondo casero, marisco fresco y toque cítrico final.</p>
+            <p class="menu-item-tags">Chef · Mar</p>
+          </article>
+
+          <article class="menu-item" data-category="postres">
+            <div class="menu-item-top">
+              <h3 class="menu-item-title">Tarta de queso</h3>
+              <p class="menu-item-price">5,90 €</p>
+            </div>
+            <p class="menu-item-desc">Cremosa, con base crujiente y compota ligera.</p>
+            <p class="menu-item-tags">Casero · Suave</p>
+          </article>
+
+          <article class="menu-item" data-category="postres">
+            <div class="menu-item-top">
+              <h3 class="menu-item-title">Chocolate &amp; avellana</h3>
+              <p class="menu-item-price">6,50 €</p>
+            </div>
+            <p class="menu-item-desc">Texturas de cacao, praliné y sal en escamas.</p>
+            <p class="menu-item-tags">Intenso · Elegante</p>
+          </article>
+
+          <article class="menu-item" data-category="bebidas">
+            <div class="menu-item-top">
+              <h3 class="menu-item-title">Copa de vino</h3>
+              <p class="menu-item-price">3,80 €</p>
+            </div>
+            <p class="menu-item-desc">Selección rotativa: blanco, tinto y rosado.</p>
+            <p class="menu-item-tags">Maridaje</p>
+          </article>
+
+          <article class="menu-item" data-category="bebidas">
+            <div class="menu-item-top">
+              <h3 class="menu-item-title">Limonada artesanal</h3>
+              <p class="menu-item-price">3,20 €</p>
+            </div>
+            <p class="menu-item-desc">Limón natural, hierbabuena y un toque de jengibre.</p>
+            <p class="menu-item-tags">Sin alcohol · Fresca</p>
+          </article>
+        </div>
+
+        <div class="note">
+          <p>
+            <strong>Nota:</strong> Precios y platos son de ejemplo. Puedes cambiarlos fácilmente en el HTML.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section section-muted">
+      <div class="container split">
+        <div>
+          <div class="section-head">
+            <h2 class="section-title">Nuestra experiencia</h2>
+            <p class="section-subtitle">
+              Un lugar para celebrar, compartir y disfrutar con calma.
+            </p>
+          </div>
+
+          <div class="feature-list">
+            <article class="feature">
+              <h3 class="feature-title">Producto</h3>
+              <p class="feature-desc">Trabajamos con proveedores locales y seleccionamos lo mejor del mercado.</p>
+            </article>
+            <article class="feature">
+              <h3 class="feature-title">Detalle</h3>
+              <p class="feature-desc">Servicio cercano y profesional, con un ritmo pensado para disfrutar.</p>
+            </article>
+            <article class="feature">
+              <h3 class="feature-title">Ambiente</h3>
+              <p class="feature-desc">Iluminación cálida, música suave y una mesa impecable.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="info-card">
+          <h3 class="info-card-title">Horario</h3>
+          <ul class="info-list">
+            <li><span>Martes–Jueves</span><span>13:00–16:00 · 20:00–23:00</span></li>
+            <li><span>Viernes–Sábado</span><span>13:00–16:30 · 20:00–23:30</span></li>
+            <li><span>Domingo</span><span>13:00–16:30</span></li>
+            <li><span>Lunes</span><span>Cerrado</span></li>
+          </ul>
+          <div class="info-card-divider" aria-hidden="true"></div>
+          <h3 class="info-card-title">Ubicación</h3>
+          <p class="info-card-text">Centro · Zona tranquila · Fácil acceso</p>
+          <a class="btn btn-ghost btn-small" href="#contacto">Cómo llegar</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="galeria" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Galería</h2>
+          <p class="section-subtitle">
+            Un vistazo al ambiente y a algunos de nuestros platos.
+          </p>
+        </div>
+
+        <div class="gallery" aria-label="Galería de imágenes decorativas">
+          <div class="gallery-tile g1" role="img" aria-label="Plato elegante, imagen decorativa"></div>
+          <div class="gallery-tile g2" role="img" aria-label="Mesa preparada, imagen decorativa"></div>
+          <div class="gallery-tile g3" role="img" aria-label="Postre, imagen decorativa"></div>
+          <div class="gallery-tile g4" role="img" aria-label="Cocina, imagen decorativa"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservas" class="section section-muted">
+      <div class="container split">
+        <div>
+          <div class="section-head">
+            <h2 class="section-title">Reservas</h2>
+            <p class="section-subtitle">
+              Completa el formulario y verás una confirmación en pantalla (sin envío real).
+            </p>
+          </div>
+
+          <form class="form" data-reserva-form>
+            <div class="form-grid">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel"
+                  placeholder="Ej: 600 123 456" required />
+              </div>
+              <div class="field">
+                <label for="fecha">Fecha</label>
+                <input id="fecha" name="fecha" type="date" required />
+              </div>
+              <div class="field">
+                <label for="hora">Hora</label>
+                <input id="hora" name="hora" type="time" required />
+              </div>
+              <div class="field">
+                <label for="personas">Personas</label>
+                <select id="personas" name="personas" required>
+                  <option value="" selected disabled>Selecciona…</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                </select>
+              </div>
+              <div class="field field-full">
+                <label for="nota">Nota (opcional)</label>
+                <textarea id="nota" name="nota" rows="4"
+                  placeholder="Alergias, celebración, preferencia de mesa…"></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Confirmar reserva</button>
+              <p class="form-hint">
+                Al no tener back-end, esta reserva es una simulación. Si quieres, luego añadimos envío por
+                email/WhatsApp.
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <aside class="info-card">
+          <h3 class="info-card-title">Contacto rápido</h3>
+          <p class="info-card-text">
+            Para reservas de grupos o eventos, escríbenos y te respondemos lo antes posible.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-k">Tel.</span>
+              <a class="contact-v" href="tel:+34000000000">+34 000 000 000</a>
+            </li>
+            <li>
+              <span class="contact-k">Email</span>
+              <a class="contact-v" href="mailto:reservas@elbuen-sabor.com">reservas@elbuen-sabor.com</a>
+            </li>
+          </ul>
+
+          <div class="info-card-divider" aria-hidden="true"></div>
+          <p class="info-card-text">
+            <strong>Dress code:</strong> casual elegante.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="container split">
+        <div>
+          <div class="section-head">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-subtitle">
+              Cambia estos datos por tu dirección real. El mapa es un marcador visual sin conexión.
+            </p>
+          </div>
+
+          <div class="contact-cards">
+            <article class="mini-card">
+              <h3 class="mini-card-title">Dirección</h3>
+              <p class="mini-card-text">Calle Ejemplo 123, 00000 · Tu Ciudad</p>
+            </article>
+            <article class="mini-card">
+              <h3 class="mini-card-title">Teléfono</h3>
+              <p class="mini-card-text"><a href="tel:+34000000000">+34 000 000 000</a></p>
+            </article>
+            <article class="mini-card">
+              <h3 class="mini-card-title">Correo</h3>
+              <p class="mini-card-text"><a href="mailto:hola@elbuen-sabor.com">hola@elbuen-sabor.com</a></p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="map-card" aria-label="Mapa de ubicación (decorativo)">
+          <div class="map-pin" aria-hidden="true"></div>
+          <div class="map-grid" aria-hidden="true"></div>
+          <p class="map-caption">Ubicación aproximada</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">El Buen Sabor</p>
+        <p class="footer-note">Cocina de autor con alma tradicional.</p>
+      </div>
+      <div class="footer-links" aria-label="Enlaces rápidos">
+        <a href="#carta">Carta</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <p class="footer-copy">© <span data-year></span> El Buen Sabor. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <div class="toast-inner">
+      <p class="toast-title" data-toast-title>Reserva lista</p>
+      <p class="toast-text" data-toast-text>Te esperamos.</p>
+      <button class="toast-close" type="button" aria-label="Cerrar">Cerrar</button>
+    </div>
+  </div>
+</body>
+
+</html>
