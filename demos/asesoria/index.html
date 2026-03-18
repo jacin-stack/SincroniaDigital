@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="López & Co. — Asesoría moderna para empresas y profesionales. Estrategia, finanzas, operaciones y acompañamiento." />
+  <meta name="theme-color" content="#0a0f1f" />
+  <title>López &amp; Co. — Asesoría con método</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/site.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <div class="shell" id="app">
+    <aside class="rail" aria-label="Navegación lateral">
+      <a class="logo" href="#inicio" aria-label="Inicio López & Co.">
+        <span class="logo__mark" aria-hidden="true">L</span>
+        <span class="logo__text">López &amp; Co.</span>
+      </a>
+
+      <nav class="rail__nav" aria-label="Secciones">
+        <a class="rail__link" href="#enfoque">Enfoque</a>
+        <a class="rail__link" href="#areas">Áreas</a>
+        <a class="rail__link" href="#ritual">Ritual</a>
+        <a class="rail__link" href="#herramientas">Herramientas</a>
+        <a class="rail__link" href="#preguntas">Preguntas</a>
+      </nav>
+
+      <div class="rail__cta">
+        <button class="btn btn--solid" type="button" data-open-contact>Contactar</button>
+        <button class="btn btn--soft" type="button" data-copy-email>Copiar email</button>
+        <a class="rail__small" id="mailLink" href="mailto:hola@lopezco.com">hola@lopezco.com</a>
+      </div>
+    </aside>
+
+    <header class="topbar" aria-label="Barra superior">
+      <a class="topbar__brand" href="#inicio">López &amp; Co.</a>
+      <button class="iconbtn" type="button" aria-expanded="false" aria-controls="mobileNav" data-mobile-nav>
+        <span class="sr-only">Abrir navegación</span>
+        <span class="iconbtn__dots" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <nav class="mobileNav" id="mobileNav" aria-label="Navegación móvil">
+      <a href="#enfoque">Enfoque</a>
+      <a href="#areas">Áreas</a>
+      <a href="#ritual">Ritual</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#preguntas">Preguntas</a>
+      <button class="btn btn--solid" type="button" data-open-contact>Contactar</button>
+    </nav>
+
+    <main class="main" id="main">
+      <section class="scene" id="inicio">
+        <div class="scene__inner">
+          <div class="headline">
+            <p class="eyebrow">Asesoría para decidir mejor y ejecutar con ritmo</p>
+            <h1>Orden, foco y seguimiento semanal.</h1>
+            <p class="sub">
+              López &amp; Co. combina diagnóstico rápido, métricas simples y acompañamiento ligero para
+              que avances sin depender de “motivación”.
+            </p>
+            <div class="actions">
+              <button class="btn btn--solid" type="button" data-open-contact>Pedir una llamada</button>
+              <a class="btn btn--link" href="#ritual">Ver el ritual semanal</a>
+            </div>
+          </div>
+
+          <div class="marquee" aria-label="Áreas de trabajo">
+            <div class="marquee__track">
+              <span>Estrategia</span>
+              <span>Finanzas</span>
+              <span>Operaciones</span>
+              <span>Pricing</span>
+              <span>Procesos</span>
+              <span>Tableros</span>
+              <span>Prioridades</span>
+              <span>Seguimiento</span>
+            </div>
+            <div class="marquee__track" aria-hidden="true">
+              <span>Estrategia</span>
+              <span>Finanzas</span>
+              <span>Operaciones</span>
+              <span>Pricing</span>
+              <span>Procesos</span>
+              <span>Tableros</span>
+              <span>Prioridades</span>
+              <span>Seguimiento</span>
+            </div>
+          </div>
+
+          <div class="meter" aria-label="Tres promesas">
+            <div class="meter__item">
+              <div class="meter__bar"><span style="width: 86%"></span></div>
+              <div class="meter__label">Claridad en métricas</div>
+            </div>
+            <div class="meter__item">
+              <div class="meter__bar"><span style="width: 78%"></span></div>
+              <div class="meter__label">Ritmo de ejecución</div>
+            </div>
+            <div class="meter__item">
+              <div class="meter__bar"><span style="width: 92%"></span></div>
+              <div class="meter__label">Decisiones sin bloqueo</div>
+            </div>
+          </div>
+        </div>
+        <div class="scene__bg" aria-hidden="true"></div>
+      </section>
+
+      <section class="band" id="enfoque">
+        <div class="band__inner">
+          <h2>Enfoque</h2>
+          <div class="split">
+            <div class="split__a">
+              <p class="big">
+                No vendemos “consultoría”. Montamos un sistema simple que tu equipo puede mantener:
+                objetivos, tablero, ritual y un backlog pequeño.
+              </p>
+              <p class="muted">
+                Trabajamos con entregables que se pueden usar mañana, no documentos para archivar.
+              </p>
+            </div>
+            <div class="split__b">
+              <div class="quoteWall" role="list" aria-label="Señales típicas">
+                <div class="quoteWall__item" role="listitem">“Mucho trabajo, poca visibilidad”</div>
+                <div class="quoteWall__item" role="listitem">“Decisiones lentas”</div>
+                <div class="quoteWall__item" role="listitem">“Urgencias constantes”</div>
+                <div class="quoteWall__item" role="listitem">“Márgenes que no cuadran”</div>
+                <div class="quoteWall__item" role="listitem">“Crecimiento sin foco”</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--dark" id="areas">
+        <div class="band__inner">
+          <div class="band__head">
+            <h2>Áreas</h2>
+            <p class="muted">Explora por tema. (No son “cards”: es un panel navegable.)</p>
+          </div>
+
+          <div class="switcher" data-switcher>
+            <div class="switcher__tabs" role="tablist" aria-label="Áreas de asesoría">
+              <button class="chip is-active" type="button" role="tab" aria-selected="true" data-tab="fin">
+                Finanzas
+              </button>
+              <button class="chip" type="button" role="tab" aria-selected="false" data-tab="ops">
+                Operaciones
+              </button>
+              <button class="chip" type="button" role="tab" aria-selected="false" data-tab="str">
+                Estrategia
+              </button>
+            </div>
+
+            <div class="switcher__panel" role="tabpanel" data-panel>
+              <div class="panel is-active" data-key="fin">
+                <h3>Finanzas &amp; control</h3>
+                <p>
+                  Dejamos un tablero mensual (ventas, coste, margen, caja) y una rutina de revisión
+                  de 30 minutos.
+                </p>
+                <div class="bullets">
+                  <span>Cashflow</span><span>Márgenes</span><span>Presupuesto</span><span>KPIs</span>
+                </div>
+              </div>
+              <div class="panel" data-key="ops">
+                <h3>Operaciones &amp; procesos</h3>
+                <p>
+                  Bajamos el caos a checklists y estándares. Menos retrabajo, más consistencia y
+                  menos urgencias.
+                </p>
+                <div class="bullets">
+                  <span>SOPs</span><span>Calidad</span><span>Flujos</span><span>Responsables</span>
+                </div>
+              </div>
+              <div class="panel" data-key="str">
+                <h3>Estrategia &amp; crecimiento</h3>
+                <p>
+                  Ajustamos oferta, pricing y foco. Definimos objetivos y un plan en fases sin
+                  dispersión.
+                </p>
+                <div class="bullets">
+                  <span>Oferta</span><span>Pricing</span><span>OKRs</span><span>Pipeline</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="ritual">
+        <div class="band__inner">
+          <h2>El ritual semanal (lo que cambia el juego)</h2>
+          <div class="timeline" aria-label="Rutina semanal">
+            <div class="timeline__row">
+              <div class="timeline__when">Lunes</div>
+              <div class="timeline__what">
+                <div class="timeline__title">Prioridades</div>
+                <div class="muted">Elegimos 3–5 acciones y quitamos ruido.</div>
+              </div>
+            </div>
+            <div class="timeline__row">
+              <div class="timeline__when">Miércoles</div>
+              <div class="timeline__what">
+                <div class="timeline__title">Desbloqueo</div>
+                <div class="muted">Decisiones, riesgos y ajustes rápidos.</div>
+              </div>
+            </div>
+            <div class="timeline__row">
+              <div class="timeline__when">Viernes</div>
+              <div class="timeline__what">
+                <div class="timeline__title">Cierre</div>
+                <div class="muted">Métricas, aprendizaje y siguiente semana.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--dark" id="herramientas">
+        <div class="band__inner">
+          <div class="band__head">
+            <h2>Herramientas</h2>
+            <p class="muted">Un mini “kit” (copiable) para empezar a ordenar hoy.</p>
+          </div>
+
+          <div class="toolbox">
+            <div class="toolbox__item">
+              <div class="toolbox__label">Plantilla de tablero mensual</div>
+              <button class="btn btn--soft" type="button" data-copy="Ventas | Costes | Margen | Caja | Acciones">
+                Copiar
+              </button>
+            </div>
+            <div class="toolbox__item">
+              <div class="toolbox__label">Checklist de procesos (SOP)</div>
+              <button class="btn btn--soft" type="button"
+                data-copy="Objetivo → Pasos → Responsable → Tiempo → Errores típicos → Control de calidad">
+                Copiar
+              </button>
+            </div>
+            <div class="toolbox__item">
+              <div class="toolbox__label">Guía de priorización semanal</div>
+              <button class="btn btn--soft" type="button" data-copy="Impacto x Esfuerzo → 3-5 acciones → 1 métrica">
+                Copiar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="preguntas">
+        <div class="band__inner">
+          <h2>Preguntas</h2>
+          <div class="qa">
+            <details>
+              <summary>¿Trabajáis con autónomos y empresas?</summary>
+              <p>Sí. Ajustamos alcance: desde oferta y números, hasta operaciones y crecimiento.</p>
+            </details>
+            <details>
+              <summary>¿Cómo se empieza?</summary>
+              <p>Con una llamada corta. Si encaja, hacemos diagnóstico y propuesta en 48–72h.</p>
+            </details>
+            <details>
+              <summary>¿Hay tarifas cerradas?</summary>
+              <p>Tenemos paquetes y también proyectos a medida, según objetivos y complejidad.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <footer class="end">
+        <div class="end__inner">
+          <div class="end__left">
+            <div class="end__brand">López &amp; Co.</div>
+            <div class="muted">Asesoría con método. Hecha para usar.</div>
+          </div>
+          <div class="end__right">
+            <button class="btn btn--solid" type="button" data-open-contact>Escribir ahora</button>
+            <div class="muted">© <span id="year"></span></div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <dialog class="drawer" id="contactDrawer" aria-label="Contacto">
+    <form method="dialog" class="drawer__panel">
+      <div class="drawer__head">
+        <div>
+          <div class="drawer__title">Contacto</div>
+          <div class="muted">Sin back-end: email / WhatsApp / copiar datos.</div>
+        </div>
+        <button class="iconbtn" value="close" aria-label="Cerrar">
+          <span class="iconbtn__x" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="drawer__body">
+        <div class="contactGrid">
+          <div class="contactGrid__item">
+            <div class="label">Email</div>
+            <div class="value" id="emailText">hola@lopezco.com</div>
+            <div class="row">
+              <a class="btn btn--solid" id="mailtoBtn" href="mailto:hola@lopezco.com">Abrir correo</a>
+              <button class="btn btn--soft" type="button" data-copy-email>Copiar</button>
+            </div>
+          </div>
+          <div class="contactGrid__item">
+            <div class="label">WhatsApp (opcional)</div>
+            <div class="value muted">Añade tu número en `js/site.js`</div>
+            <a class="btn btn--soft" id="waBtn" href="#" aria-disabled="true">Abrir WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="composer">
+          <div class="label">Mensaje rápido</div>
+          <textarea id="quickMessage" rows="4"
+            placeholder="Escribe 2–3 líneas: objetivo, situación y urgencia."></textarea>
+          <div class="row">
+            <button class="btn btn--solid" type="button" data-send-email>Enviar por email</button>
+            <button class="btn btn--soft" type="button" data-copy-message>Copiar mensaje</button>
+          </div>
+          <div class="muted small" id="drawerStatus" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="./js/site.js" defer></script>
+</body>
+
+</html>
