@@ -164,8 +164,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-aos="fade-up">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
-                            alt="Restaurante El Buen Sabor">
+                        <img src="img/imgrestaurante.jpg" alt="Restaurante El Buen Sabor">
                     </div>
                     <div class="portfolio-content">
                         <h3>Restaurante El Buen Sabor</h3>
@@ -176,14 +175,14 @@
                             <span>PHP</span>
                             <span>MySQL</span>
                         </div>
-                        <button class="btn-primary" onclick="openModal('portfolio-modal')">Ver proyecto</button>
+                        <a class="btn-primary" href="demos/restaurante/index.html" target="_blank"
+                            rel="noopener noreferrer">Ver proyecto</a>
                     </div>
                 </div>
 
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop"
-                            alt="Peluquería Modern Look">
+                        <img src="img/imgpeluqueria.jpg" alt="Peluquería Modern Look">
                     </div>
                     <div class="portfolio-content">
                         <h3>Peluquería Modern Look</h3>
@@ -193,7 +192,8 @@
                             <span>CSS3</span>
                             <span>JavaScript</span>
                         </div>
-                        <button class="btn-primary" onclick="openModal('portfolio-modal')">Ver proyecto</button>
+                        <a class="btn-primary" href="demos/peluqueria/index.html" target="_blank"
+                            rel="noopener noreferrer">Ver proyecto</a>
                     </div>
                 </div>
 
@@ -210,7 +210,8 @@
                             <span>Node.js</span>
                             <span>MongoDB</span>
                         </div>
-                        <button class="btn-primary" onclick="openModal('portfolio-modal')">Ver proyecto</button>
+                        <a class="btn-primary" href="demos/asesoria/index.html" target="_blank"
+                            rel="noopener noreferrer">Ver proyecto</a>
                     </div>
                 </div>
             </div>
@@ -480,16 +481,6 @@
             </p>
             <button class="btn-primary" onclick="closeModal('service-modal'); openModal('contact-modal')">Solicitar
                 presupuesto</button>
-        </div>
-    </div>
-
-    <div class="modal" id="portfolio-modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('portfolio-modal')">&times;</span>
-            <h2>Detalles del Proyecto</h2>
-            <p>¿Quieres saber más sobre este proyecto? Contáctanos y te mostramos cómo lo hicimos posible.</p>
-            <button class="btn-primary" onclick="closeModal('portfolio-modal'); openModal('contact-modal')">Solicitar
-                información</button>
         </div>
     </div>
 
